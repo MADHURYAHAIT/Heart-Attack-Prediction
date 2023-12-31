@@ -4,6 +4,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 import pandas as pd
 import numpy as np
+import pickle
+import warnings
+warnings.filterwarnings("ignore")
 
 from imblearn.over_sampling import SMOTE
 from xgboost import XGBClassifier
@@ -23,7 +26,11 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3 , random
 rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 
 rf_classifier.fit(X_train, Y_train)
-Y_pred = rf_classifier.predict(X_test)
+
+pickle.dump(rf_classifier, open('model.pkl','wb'))
+model=pickle.load(open('model.pkl','rb'))
+
+# Y_pred = rf_classifier.predict(X_test)
 
 # print(Y_pred.tolist())
 # accuracy = accuracy_score(Y_test, Y_pred)
@@ -32,23 +39,25 @@ Y_pred = rf_classifier.predict(X_test)
 # print("Accuracy:", accuracy)
 # print("Confusion Matrix:\n", confusion)
 
-print("================================== Enter the following details to check if you are likely to have a stroke ==================================\n")
+# print("================================== Enter the following details to check if you are likely to have a stroke ==================================\n")
 
-age=int(input("Enter your age: "))
-gender=input("Enter Gender :")
-if gender.upper()=="MALE":
-    gender
-impluce=int(input("Enter your impluse: "))
-pressurehight=int(input("Enter your pressurehight: "))
-pressurelow=int(input("Enter your pressurelow: "))
-glucose=float(input("Enter your glucose: "))
-kcm=int(input("Enter your kcm: "))
-troponin=float(input("Enter your troponin: "))
+# age=int(input("Enter your age: "))
+# gender=input("Enter Gender :")
+# if gender.upper()=="MALE":
+#     gender=1
+# else:
+#     gender=0
+# impluce=int(input("Enter your impulse: "))
+# pressurehight=int(input("Enter your pressurehight: "))
+# pressurelow=int(input("Enter your pressurelow: "))
+# glucose=float(input("Enter your glucose: "))
+# kcm=float(input("Enter your kcm: "))
+# troponin=float(input("Enter your troponin: "))
 
-k=rf_classifier.predict([[age,impluce,pressurehight,pressurelow,glucose,kcm,troponin]])
+# k=rf_classifier.predict([[age,gender,impluce,pressurehight,pressurelow,glucose,kcm,troponin]])
 
-print("\n ==================================================== Result ==========================================================\n")
-if k=='negative':
-    print("You are safe")
-else:
-    print("You will most likely have Heart Attack")
+# print("\n ================================================================ Result ====================================================================\n")
+# if k=='negative':
+#     print("You are safe")
+# else:
+#     print("You will most likely have Heart Attack")

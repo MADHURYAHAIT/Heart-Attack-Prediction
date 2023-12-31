@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Heart Attack Prediction</h2>
+        <form action="/predict" method="POST" class="col s12"> 
+            
+            <div class="form-group col-md-6">
+                <label for="name">Age:</label>
+                <input type="number" class="form-control" id="Age" placeholder="Enter your name">
+            </div>
+            <div class="form-group  col s4">
+                <label for="country">Gender:</label>
+                <select class="form-control" id="Gender">
+                    <option value="" selected disabled>Select your Sex</option>
+                    <option value="MALE">Male</option>
+                    <option value="FEMALE">Female</option>
+                </select>
+            </div>
+            <div class="form-group col s4">
+                <label for="name">Impulse:</label>
+                <input type="number" class="form-control validate" id="Impulse" placeholder="Enter your Impulse">
+            </div>
+            <div class="form-group col s4">
+                <label for="name">Pressure Hight:</label>
+                <input type="number" class="form-control validate" id="Pressure Hight" placeholder="Enter your Pressure Hight">
+            </div>
+
+            <div class="form-group col s4">
+                <label for="name">Pressure Low:</label>
+                <input type="number" class="form-control validate" id="Pressure Low" placeholder="Enter your Pressure Low">
+            </div>
+            <div class="form-group col s4">
+                <label for="name">Glucose:</label>
+                <input type="number" class="form-control validate" id="Glucose" placeholder="Enter your Glucose">
+            </div>
+            <div class="form-group col s4">
+                <label for="name">KCM:</label>
+                <input type="number" class="form-control validate" id="kcm" placeholder="Enter your KCM">
+            </div>
+            <div class="form-group col s4">
+                <label for="name">Troponin:</label>
+                <input type="number" class="form-control validate" id="Troponin" placeholder="Enter your Troponin">
+            </div>
+            
+            
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
