@@ -199,6 +199,11 @@ input[type="search"] {
   color: #fff;
 }
 
+.fa-heart{
+
+ position: relative !important;
+  transform: rotate(-45deg);
+}
 @media all and (max-width:800px) {
   body {
     font-size: 0.9rem;

@@ -25,7 +25,7 @@
           <!-- <h2><a href="#"><i class="ion-plane"></i> Cardiocare</a></h2> -->
           <nav>
             <div class="nav-wrapper">
-              <a href="" class="brand-logo">Cardiocare</a>
+              <a href="" class="brand-logo">Cardiocare<i class="fa-solid fa-heart"></i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href=""><i class="fa-solid fa-code-fork"></i></a></li>
                 <li><a href=""><i class="fa-brands fa-github"></i> </a></li>
@@ -60,14 +60,12 @@
                 <label for="name">Age:</label>
                 <input type="number" class="form-control" id="Age" placeholder="Enter your Age">
             </div>
-            <div class="input-field  col s12 m6 l6">
-                <label for="Gender">Gender:</label>
-                <select class="input-field" id="Gender">
-                    <option value="" selected disabled>Select your Sex</option>
-                    <option value="MALE">Male</option>
-                    <option value="FEMALE">Female</option>
-                </select>
-            </div>
+            <select class="browser-default" id="Gender">
+              <option value="" selected disabled>Select your Sex</option>
+              <option value="MALE">Male</option>
+              <option value="FEMALE">Female</option>
+          </select>
+          
            
             <div class="form-group col s12 m6 l6">
                 <label for="name">Impulse:</label>
@@ -112,5 +110,10 @@
         </div>
       
       </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit(); // Initialize Materialize components
+        });
+    </script>
 </body>
 </html>
