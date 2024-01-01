@@ -5,7 +5,7 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 @app.route('/')
 def home():
-    return render_template('heart_attack.html')
+    return render_template('/abc.html')
 
 @app.route('/predict', methods=['POST','GET'])
 def predict():
@@ -17,3 +17,5 @@ def predict():
         return render_template('heart_attack.html', prediction_text='You are not likely to have a heart attack')
     else:
         return render_template('heart_attack.html', prediction_text='You are likely to have a heart attack')
+    
+app.run(debug=True)
