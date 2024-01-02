@@ -1,97 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Attack</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   <!-- Include Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-sha512-hash-here..." crossorigin="anonymous" />
-    
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="your-sha512-hash-here" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
-   <!-- Compiled and minified CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-   <!-- Compiled and minified JavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-           
-            
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
+
 <body>
     <div class="container">
-
         <header>
-          <!-- <h2><a href="#"><i class="ion-plane"></i> Cardiocare</a></h2> -->
-          <nav>
-            <div class="nav-wrapper">
-              <a href="" class="brand-logo">Cardiocare<i class="fa-solid fa-heart"></i></a>
-           
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href=""><i class="fa-solid fa-code-fork"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-github"></i> </a></li>
-              </ul>
-            </div>
-          </nav>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="" class="brand-logo">Cardiocare<i class="fas fa-heart"></i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href=""><i class="fas fa-code-branch"></i></a></li>
+                        <li><a href=""><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
-      
         <div class="cover">
-          <h2>know your <span>heart</span> now.</h2>
+            <h2>know your <span>heart</span> now.</h2>
+            <form action="/predict" method="post">
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                        <label for="Age">Age:</label>
+                        <input type="number" class="validate " id="Age" name="age" placeholder="Enter your Age">
+                    </div>
 
+                    <div class="input-field col s12 m6 l6">
+                        <label for="Impulse">Impulse:</label>
+                        <input type="number" step="any" class="validate " id="Impulse" name="impulse" placeholder="Enter your Impulse">
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <label for="Pressure_High">Pressure High:</label>
+                        <input type="number" step="any" class="validate " id="Pressure_High" name="pressurehight" placeholder="Enter your Pressure High">
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <label for="Pressure_Low">Pressure Low:</label>
+                        <input type="number" step="any" class="validate " id="Pressure_Low" name="pressurelow" placeholder="Enter your Pressure Low">
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <label for="Glucose">Glucose:</label>
+                        <input type="number" step="any" class="validate " id="Glucose" name="glucose" placeholder="Enter your Glucose">
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <label for="KCM">KCM:</label>
+                        <input type="number" step="any" class="validate " id="KCM" name="kcm" placeholder="Enter your KCM">
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <label for="Troponin">Troponin:</label>
+                        <input type="number" step="any" class="validate " id="Troponin" name="troponin" placeholder="Enter your Troponin">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary pulse z-depth-5 ">Submit</button>
+            </form>
+           <!-- Modal Trigger -->
+           <a class="btn btn-primary pulse z-depth-5 modal-trigger " href="#result-modal">Result</a>
 
-          <form action="/predict" method="POST"> 
-            <div class="row ">
-            <div class="form-group col s12 m6 l6 ">
-                <label for="age">Age:</label>
-                <input type="number" class="form-control" id="Age" placeholder="Enter your Age">
-            </div>
-           
+           <!-- Modal Structure -->
+           <div id="result-modal" class="modal">
+               <div class="modal-content">
+                   <h4>Result</h4>
+                   <p class="result">{{pred}}</p>
+               </div>
+               <div class="modal-footer">
+                   <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+               </div>
+           </div>
 
-            
-           
-            <div class="form-group col s12 m6 l6">
-                <label for="name">Impulse:</label>
-                <input type="number" class="form-control validate" id="Impulse" placeholder="Enter your Impulse">
-            </div>
-            <div class="form-group col s12 m6 l6">
-                <label for="name">Pressure Hight:</label>
-                <input type="number" class="form-control validate" id="Pressure Hight" placeholder="Enter your Pressure Hight">
-            </div>
-           
-            <div class="form-group col s12 m6 l6">
-                <label for="name">Pressure Low:</label>
-                <input type="number" class="form-control validate" id="Pressure Low" placeholder="Enter your Pressure Low">
-            </div>
-            <div class="form-group col s12 m6 l6">
-                <label for="name">Glucose:</label>
-                <input type="number" class="form-control validate" id="Glucose" placeholder="Enter your Glucose">
-            </div>
-            <div class="form-group col s12 m6 l6">
-                <label for="name">KCM:</label>
-                <input type="number" class="form-control validate" id="kcm" placeholder="Enter your KCM">
-            </div>
-            <div class="form-group col s12 m6 l6">
-                <label for="name">Troponin:</label>
-                <input type="number" class="form-control validate" id="Troponin" placeholder="Enter your Troponin">
-            </div>
-          </div>
-            
+           <div id="madeby">
+               <span>
+                   website by <a href="https://www.linkedin.com/in/madhuryahait/" target="_blank"> Madhurya Hait</a>
+               </span>
+           </div>
+       </div>
+   </div>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-         
-        
-            <button type="submit" class="btn btn-primary pulse z-depth-5">Submit</button>
-        </form>
-
-        {{pred}}
-
-          <div id="madeby">
-            <span>
-              website by <a href="https://www.linkedin.com/in/madhuryahait/" target="_blank"> Madhurya Hait</a>
-            </span>
-          </div>
-        </div>
+   <!-- Initialize Modal -->
+   <script>
+       document.addEventListener('DOMContentLoaded', function () {
+           var elems = document.querySelectorAll('.modal');
+           var instances = M.Modal.init(elems);
+       });
+   </script>
       
-      </div>
-     
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+   
 </body>
+
 </html>
