@@ -17,7 +17,7 @@ df= pd.read_csv('Heart.csv')
 df.dropna(inplace=True)
 df.drop_duplicates(inplace=True)
 
-features = ["age",'gender',"impluse","pressurehight","pressurelow","glucose","kcm","troponin"]
+features = ["age","impluse","pressurehight","pressurelow","glucose","kcm","troponin"]
 X = df[features]
 Y = df['class']
 
