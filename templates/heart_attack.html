@@ -8,7 +8,7 @@
    <!-- Include Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-sha512-hash-here..." crossorigin="anonymous" />
     
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
    <!-- Compiled and minified CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -33,22 +33,6 @@
               </ul>
             </div>
           </nav>
-          <!-- <nav>
-            <ul>
-              <li>
-                <a href="#" title="Hotels">Hotels</a>
-              </li>
-              <li>
-                <a href="#" title="Flights">Flights</a>
-              </li>
-              <li>
-                <a href="#" title="Tours">Tours</a>
-              </li>
-              <li>
-                <a class="btn" href="#" title="Register / Log In">Register/Log In</a>
-              </li>
-            </ul>
-          </nav> -->
         </header>
       
         <div class="cover">
