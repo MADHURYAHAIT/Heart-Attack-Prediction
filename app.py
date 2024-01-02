@@ -11,14 +11,14 @@ def hellow_world():
 @app.route('/predict', methods=['POST','GET'])
 def predict():
     int_features = [int(x) for x in request.form.values()]
-    print(int_features)
+    # print(int_features)
     final_features = [np.array(int_features)]
     prediction = model.predict_proba(final_features)
-    print(prediction)
-    # if prediction == ['negative']:
-    #     return render_template('heart_attack.html', pred='You are not likely to have a heart attack')
-    # else:
-    #     return render_template('heart_attack.html', pred='You are likely to have a heart attack')
+    # print(prediction)
+    if prediction == ['negative']:
+        return render_template('heart_attack.html', pred='You are not likely to have a heart attack')
+    else:
+        return render_template('heart_attack.html', pred='You are likely to have a heart attack')
 
 if __name__ == "__main__":
     app.run()
