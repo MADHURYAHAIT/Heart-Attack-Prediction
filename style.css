@@ -19,6 +19,10 @@
 :-moz-placeholder {
   color: #56585b;
 }
+nav .brand-logo{
+ font-size: 2rem !important;
+ font-weight: 100 !important;
+}
 
 html {
   -webkit-box-sizing: border-box;
@@ -66,14 +70,16 @@ h1 {
 
 h2{
     margin-top: 0px !important;
-    font-size: 2rem;
-    font-weight: 900;
+    font-size: 0.3rem;
+    font-weight: 900 !important;
     color: #fff;
 
 }
 
-i {
-  font-size: 1.3rem;
+h2 span{
+  font-size: 5.7rem;
+  color: red;
+
 }
 
 header {
@@ -200,9 +206,16 @@ input[type="search"] {
 }
 
 .fa-heart{
+  color: red;
+  transform: rotate(45deg);
+  padding-left: 5px;
 
- position: relative !important;
-  transform: rotate(-45deg);
+}
+
+nav .brand-logo i{
+  float:right !important;
+  margin: 0px !important;
+
 }
 @media all and (max-width:800px) {
   body {
@@ -247,10 +260,53 @@ input[type="search"] {
   }
 }
 
+@media all and (max-width:600px) {
+  nav,nav i{
+    line-height: 50px !important;
+  }
+}
+
+@media all and (max-width:410px) {
+  nav{
+   
+   
+    margin-top: 0px !important;
+  }
+  .fa-heart{
+    padding-left: 0px;
+  
+  }
+
+}
+
+@media all and (max-width:400px) {
+  nav .brand-logo{
+   
+   left: 46% !important;
+   
+  }
+  
+}
+
+@media all and (max-width:380px) {
+  nav .brand-logo{
+   
+    left: 48% !important;
+    font-size: 1.8rem !important;
+    
+   }
+
+  
+  }
 @media all and (max-width:360px) {
   header nav li{
     margin: 0 10px;
   }
+  nav .brand-logo{
+    font-size: 1.6rem !important;
+    left: 47% !important;
+    
+   }
 
   .flex-form {
     display: -webkit-box;
@@ -267,4 +323,26 @@ input[type="search"] {
   label {
     display: none;
   }
+}
+
+@media all and (max-width:330px) {
+  nav .brand-logo{
+    font-size: 1.4rem !important;
+    left: 45% !important;
+    
+   }
+
+}
+
+@media all and (max-width:300px) {
+  nav .brand-logo{
+   
+    left: 50% !important;
+    
+   }
+
+   nav .brand-logo i{
+    display: none !important;
+   }
+
 }
