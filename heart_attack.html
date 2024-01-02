@@ -4,61 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Attack</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-sha512-hash-here..." crossorigin="anonymous" />
     
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+           
+            
 </head>
 <body>
     <div class="container">
-        <h2>Heart Attack Prediction</h2>
 
-        <form action="/predict" method="POST" class="col s12"> 
+        <header>
+          <!-- <h2><a href="#"><i class="ion-plane"></i> Cardiocare</a></h2> -->
+          <nav>
+            <div class="nav-wrapper">
+              <a href="" class="brand-logo">Cardiocare<i class="fa-solid fa-heart"></i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href=""><i class="fa-solid fa-code-fork"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-github"></i> </a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- <nav>
+            <ul>
+              <li>
+                <a href="#" title="Hotels">Hotels</a>
+              </li>
+              <li>
+                <a href="#" title="Flights">Flights</a>
+              </li>
+              <li>
+                <a href="#" title="Tours">Tours</a>
+              </li>
+              <li>
+                <a class="btn" href="#" title="Register / Log In">Register/Log In</a>
+              </li>
+            </ul>
+          </nav> -->
+        </header>
+      
+        <div class="cover">
+          <h2>know about your heart.</h2>
+
+
+          <form action="/predict" method="POST"> 
+            <div class="row ">
+            <div class="form-group col s12 m6 l6 ">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="Age" placeholder="Enter your Age">
+            </div>
+           
+
             
-            <div class="form-group col-md-6">
-                <label for="Age">Age:</label>
-                <input type="number" class="form-control" id="Age" placeholder="Enter your name">
-            </div>
-            <div class="input-field col s4">
-                <label for="Gender">Gender:</label>
-                <select class="form-control" id="Gender">
-                    <option value="" selected disabled>Select your Sex</option>
-                    <option value="MALE">Male</option>
-                    <option value="FEMALE">Female</option>
-                </select>
-            </div>
-            <div class="form-group col s4">
+           
+            <div class="form-group col s12 m6 l6">
                 <label for="name">Impulse:</label>
                 <input type="number" class="form-control validate" id="Impulse" placeholder="Enter your Impulse">
             </div>
-            <div class="form-group col s4">
+            <div class="form-group col s12 m6 l6">
                 <label for="name">Pressure Hight:</label>
                 <input type="number" class="form-control validate" id="Pressure Hight" placeholder="Enter your Pressure Hight">
             </div>
-
-            <div class="form-group col s4">
+           
+            <div class="form-group col s12 m6 l6">
                 <label for="name">Pressure Low:</label>
                 <input type="number" class="form-control validate" id="Pressure Low" placeholder="Enter your Pressure Low">
             </div>
-            <div class="form-group col s4">
+            <div class="form-group col s12 m6 l6">
                 <label for="name">Glucose:</label>
                 <input type="number" class="form-control validate" id="Glucose" placeholder="Enter your Glucose">
             </div>
-            <div class="form-group col s4">
+            <div class="form-group col s12 m6 l6">
                 <label for="name">KCM:</label>
                 <input type="number" class="form-control validate" id="kcm" placeholder="Enter your KCM">
             </div>
-            <div class="form-group col s4">
+            <div class="form-group col s12 m6 l6">
                 <label for="name">Troponin:</label>
                 <input type="number" class="form-control validate" id="Troponin" placeholder="Enter your Troponin">
             </div>
+          </div>
             
-            
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+         
+        
+            <button type="submit" class="btn btn-primary pulse z-depth-5">Submit</button>
         </form>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+          <div id="madeby">
+            <span>
+              website by <a href="https://www.linkedin.com/in/madhuryahait/" target="_blank"> Madhurya Hait</a>
+            </span>
+          </div>
+        </div>
+      
+      </div>
+     
 </body>
 </html>
