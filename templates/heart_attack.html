@@ -8,7 +8,7 @@
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="your-sha512-hash-here" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
@@ -63,10 +63,11 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary pulse z-depth-5 " id="submitBtn">Submit</button>
+                <a class="btn btn-primary pulse z-depth-5 modal-trigger hide" id="resultBtn" href="#result-modal">Result</a>
             </form>
            
            <!-- Result Button initially hidden -->
-           <a class="btn btn-primary pulse z-depth-5 modal-trigger hide" id="resultBtn" href="#result-modal">Result</a>
+          
 
            <!-- Modal Structure -->
            <div id="result-modal" class="modal">
@@ -104,16 +105,13 @@
         submitBtn.addEventListener('click', function () {
             // Optionally, you can perform any additional logic here before submitting the form
             form.submit(); // Submit the form
+           
         });
 
         form.addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
             submitBtn.classList.add('hide'); // Hide the submit button
-
-            // Delay the showing of the result button to avoid quick disappearance
-            setTimeout(function () {
-                resultBtn.classList.remove('hide'); // Show the result button
-            }, 300); // Adjust the timeout duration as needed
+            resultBtn.classList.remove('hide'); // Show the result button
         });
     });
 </script>

@@ -80,14 +80,15 @@ h1 {
 
 h2{
     margin-top: 0px !important;
-    font-size: 0.3rem;
+    font-size: 4.0rem !important;
     font-weight: 900 !important;
     color: #fff;
+    margin-bottom: 50px !important;
 
 }
 
 h2 span{
-  font-size: 4.7rem;
+  font-size: 6.3rem;
   color: red;
 
 }
@@ -230,7 +231,19 @@ nav .brand-logo i{
   body {
     font-size: 0.9rem;
   }
+  h2{
+  margin-top: 0px !important;
+  font-size: 2.3rem !important;
+  font-weight: 900 !important;
+  line-height: 40px !important;
+  color: #fff;
+  margin-bottom: 0px !important;
+  }
 
+  h2 span{
+    font-size: 4.3rem;
+
+  }
   .flex-form {
     width: 100%;
   }
