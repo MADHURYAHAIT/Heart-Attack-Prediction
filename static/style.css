@@ -2,7 +2,6 @@
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-
   -moz-box-sizing: inherit;
   box-sizing: inherit;
   background-color: transparent;
@@ -228,6 +227,10 @@ nav .brand-logo i{
 
 }
 @media all and (max-width:800px) {
+  .input-field{
+    margin-bottom:0.3rem !important ;
+    margin-top: 1rem !important;
+  }
   body {
     font-size: 0.9rem;
   }
