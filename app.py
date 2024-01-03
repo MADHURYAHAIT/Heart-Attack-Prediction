@@ -41,5 +41,7 @@ def predict():
     else:
         return render_template('heart_attack.html', pred='You are likely to have an heart attack',pred2="Contact a specialist or a Doctor Immeiately. Your health is at severe risk. Your well-being is our priority. While we're not medical professionals, we encourage you to be mindful of potential heart health concerns. Recognizing symptoms like chest pain, shortness of breath, or fatigue is crucial. However, only a qualified healthcare provider can accurately assess your risk of a heart attack. Regular check-ups and a healthy lifestyle are key preventive measures. Remember, this note is not a substitute for professional medical advice. If you have concerns, consult a healthcare professional promptly. Stay proactive in maintaining a heart-healthy lifestyle for a longer, happier life. Factors contributing to increased risk include lifestyle choices, family medical history, and specific health indicators. It is imperative for those identified to consider consulting with healthcare professionals promptly. Early detection and appropriate lifestyle modifications can play a pivotal role in mitigating the risk of heart-related issues. Thanks for using our service, keep chechking your health.")
     
-if __name__ == "__main__":
-    app.run(debug=False)
+#driver function
+
+if __name__ == '__main__':
+    app.run(debug=True)
