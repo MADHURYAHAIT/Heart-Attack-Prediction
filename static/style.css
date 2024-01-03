@@ -25,9 +25,10 @@ nav .brand-logo{
 }
 
 .modal{
-  background-color: #0000000c !important;
-  backdrop-filter: blur(90px) !important;
+  /* background-color: #0000000c !important;
+  backdrop-filter: blur(10px) !important; */
 }
+
 
 html {
   -webkit-box-sizing: border-box;
@@ -36,11 +37,12 @@ html {
 }
 .result{
   color: rgb(200, 255, 0);
+  font-size: 26px;
 }
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
-  background: url('https://images.pexels.com/photos/14995210/pexels-photo-14995210/free-photo-of-hands-holding-snow-heart-near-fireplace.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed ;
+  background: url('https://images.pexels.com/photos/2972757/pexels-photo-2972757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed ;
   -webkit-background-size: cover;
 
   -moz-background-size: cover;
@@ -146,10 +148,10 @@ a.btn:hover {
   width: 100%;
   /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.153)), to(rgba(0, 0, 0, 0.814))); */
   background: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 0%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(to bottom, rgba(213, 213, 213, 0.07) 0%, rgba(0, 0, 0, 0.628) 100%);
-  padding: 20px 50px;
+  background: linear-gradient(to bottom, rgba(216, 216, 216, 0.07) 0%, rgba(189, 189, 189, 0.191) 100%);
+  padding: 10px 50px;
   margin-top: 10vh;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(3px);
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -159,6 +161,7 @@ a.btn:hover {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
 .form-group{
@@ -352,4 +355,21 @@ nav .brand-logo i{
     display: none !important;
    }
 
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  color:rgb(202, 202, 202) !important;
+  font-weight: 600!important;
+  font-size: 28px !important;
+
+}
+
+.input-field>label{
+  color: rgb(255, 255, 255) !important;
+  font-weight: 600!important;
+  font-size: 16px !important;
+}
+
+.modal-overlay{
+  background-blend-mode:color-burn;
 }

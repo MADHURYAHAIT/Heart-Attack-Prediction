@@ -31,32 +31,32 @@
                 <div class="row">
                     <div class="input-field col s12 m6 l6">
                         <label for="Age">Age:</label>
-                        <input type="number" class="validate " id="Age" name="age" placeholder="Enter your Age">
+                        <input type="number" class="validate " id="Age" name="age">
                     </div>
 
                     <div class="input-field col s12 m6 l6">
                         <label for="Impulse">Impulse:</label>
-                        <input type="number" step="any" class="validate " id="Impulse" name="impulse" placeholder="Enter your Impulse">
+                        <input type="number" step="any" class="validate " id="Impulse" name="impulse">
                     </div>
                     <div class="input-field col s12 m6 l6">
-                        <label for="Pressure_High">Pressure High:</label>
-                        <input type="number" step="any" class="validate " id="Pressure_High" name="pressurehight" placeholder="Enter your Pressure High">
+                        <label for="Pressure_High">Systolic Blood Pressure:</label>
+                        <input type="number" step="any" class="validate " id="Pressure_High" name="pressurehight" >
                     </div>
                     <div class="input-field col s12 m6 l6">
-                        <label for="Pressure_Low">Pressure Low:</label>
-                        <input type="number" step="any" class="validate " id="Pressure_Low" name="pressurelow" placeholder="Enter your Pressure Low">
+                        <label for="Pressure_Low">Diastolic Blood Pressure:</label>
+                        <input type="number" step="any" class="validate " id="Pressure_Low" name="pressurelow" >
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="Glucose">Glucose:</label>
-                        <input type="number" step="any" class="validate " id="Glucose" name="glucose" placeholder="Enter your Glucose">
+                        <input type="number" step="any" class="validate " id="Glucose" name="glucose" >
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="KCM">KCM:</label>
-                        <input type="number" step="any" class="validate " id="KCM" name="kcm" placeholder="Enter your KCM">
+                        <input type="number" step="any" class="validate " id="KCM" name="kcm" >
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="Troponin">Troponin:</label>
-                        <input type="number" step="any" class="validate " id="Troponin" name="troponin" placeholder="Enter your Troponin">
+                        <input type="number" step="any" class="validate " id="Troponin" name="troponin" >
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary pulse z-depth-5 ">Submit</button>
@@ -66,11 +66,13 @@
 
            <!-- Modal Structure -->
            <div id="result-modal" class="modal">
-               <div class="modal-content">
+               <div class="modal-content black">
                    <h4>Result</h4>
                    <p class="result">{{pred}}</p>
+
+                   <i>{{pred2}}</i>
                </div>
-               <div class="modal-footer">
+               <div class="modal-footer black">
                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                </div>
            </div>
