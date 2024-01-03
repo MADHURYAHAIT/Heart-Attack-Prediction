@@ -8,6 +8,7 @@
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="your-sha512-hash-here" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
@@ -29,7 +30,7 @@
        
         <div class="cover">
             <h2>know your <span>heart</span> now.</h2>
-            <form action="/predict" method="post">
+            <form id="heartForm" action="/predict" method="post">
                 <div class="row">
                     <div class="input-field col s12 m6 l6">
                         <label for="Age">Age:</label>
@@ -61,10 +62,11 @@
                         <input type="number" step="any" class="validate " id="Troponin" name="troponin" >
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary pulse z-depth-5 ">Submit</button>
+                <button type="submit" class="btn btn-primary pulse z-depth-5 " id="submitBtn">Submit</button>
             </form>
-           <!-- Modal Trigger -->
-           <a class="btn btn-primary pulse z-depth-5 modal-trigger " href="#result-modal">Result</a>
+           
+           <!-- Result Button initially hidden -->
+           <a class="btn btn-primary pulse z-depth-5 modal-trigger hide" id="resultBtn" href="#result-modal">Result</a>
 
            <!-- Modal Structure -->
            <div id="result-modal" class="modal">
@@ -78,8 +80,6 @@
                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                </div>
            </div>
-
-           
        </div>
        <div id="madeby">
         <span>
@@ -91,19 +91,33 @@
    <!-- Compiled and minified JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-   <!-- Initialize Modal -->
+   <!-- Initialize Modal and Toggle Buttons -->
    <script>
-       document.addEventListener('DOMContentLoaded', function () {
-           var elems = document.querySelectorAll('.modal');
-           var instances = M.Modal.init(elems);
-       });
-   </script>
-      
-    </div>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
 
-   
+        var submitBtn = document.getElementById('submitBtn');
+        var resultBtn = document.getElementById('resultBtn');
+        var form = document.getElementById('heartForm');
+
+        submitBtn.addEventListener('click', function () {
+            // Optionally, you can perform any additional logic here before submitting the form
+            form.submit(); // Submit the form
+        });
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            submitBtn.classList.add('hide'); // Hide the submit button
+
+            // Delay the showing of the result button to avoid quick disappearance
+            setTimeout(function () {
+                resultBtn.classList.remove('hide'); // Show the result button
+            }, 300); // Adjust the timeout duration as needed
+        });
+    });
+</script>
+
 </body>
 
 </html>
