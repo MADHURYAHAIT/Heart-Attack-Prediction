@@ -228,15 +228,32 @@ nav .brand-logo i{
 }
 @media all and (max-width:800px) {
   .input-field{
-    margin-bottom:0.3rem !important ;
-    margin-top: 1rem !important;
+    margin-bottom:0.2rem !important ;
+    margin-top: 0.6rem !important;
   }
   body {
     font-size: 0.9rem;
   }
+  /* body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background: url('https://images.pexels.com/photos/2972757/pexels-photo-2972757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
+        no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-color: #008c9b;
+    color: #ffffff;
+    overflow: auto;
+    height: 100vh; 
+} */
+  
+  cover{
+    scale:0.8;
+  }
   h2{
   margin-top: 0px !important;
-  font-size: 2.3rem !important;
+  font-size: 1.5rem !important;
   font-weight: 900 !important;
   line-height: 40px !important;
   color: #fff;
@@ -244,7 +261,7 @@ nav .brand-logo i{
   }
 
   h2 span{
-    font-size: 4.3rem;
+    font-size: 3.7rem !important;
 
   }
   .flex-form {
@@ -254,7 +271,11 @@ nav .brand-logo i{
   input[type="search"] {
     flex-basis: 100%;
   }
-
+  #madeby{
+    display: none !important;
+    visibility: hidden !important;
+    
+  }
   .flex-form > * {
     font-size: 0.9rem;
   }
@@ -391,4 +412,52 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 .modal{
   box-shadow: 4px 8px 50px 100vh rgba(0, 0, 0, 0.8) !important;
+}
+
+.Linkdin ,.Linkdin a{
+  position: fixed;
+  z-index: 999;
+  transform: translateY(-50%);
+  top: 50%;
+  color:#000;
+  width:44px;
+  height:140px;
+  justify-content: space-between;
+  cursor: pointer;
+  right: 0;
+  background-color: #fff;
+}
+.bx{
+  padding: 14px 15px ;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.rotate-90 {
+
+  transform: rotate(-90deg);
+  font-family:'Reckless Neue Medium' ;
+  padding: 40px 20px;
+  padding-left: 0px;
+
+  
+}
+#no-underline {
+  text-decoration: none;
+}
+
+#madeby span , #madeby span a{
+  color:#fff !important;
+  font-family:'Reckless Neue Medium' ;
+}
+
+#madeby span a:hover{
+  color:#ffffff !important;
+  text-decoration: none !important;
+}
+
+#resultBtn{
+  float:right;
+  margin-top: 10px;
 }
