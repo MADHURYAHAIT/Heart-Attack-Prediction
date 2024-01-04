@@ -42,7 +42,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
-  background: url('https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed ;
+  background: url('https://images.pexels.com/photos/3376790/pexels-photo-3376790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed ;
   -webkit-background-size: cover;
 
   -moz-background-size: cover;
@@ -232,6 +232,16 @@ nav .brand-logo i{
     margin-top: 0.6rem !important;
   }
   body {
+    background: url('https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')no-repeat center center fixed ;
+    font-family: 'Lato', sans-serif;
+  margin: 0;
+  -webkit-background-size: cover;
+
+  -moz-background-size: cover;
+  background-size: cover;
+  background-color: #000000;
+  color: #ffffff;
+  overflow: hidden;
     font-size: 0.9rem;
   }
   /* body {
@@ -446,7 +456,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 #madeby span , #madeby span a{
-  color:#c8c8c8 !important;
+  color:#e5e5e5 !important;
   font-family:'Reckless Neue Medium' ;
 }
 
