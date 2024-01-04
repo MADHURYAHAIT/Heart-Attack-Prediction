@@ -366,9 +366,7 @@ nav .brand-logo i{
     flex-basis: 0;
   }
 
-  label {
-    display: none;
-  }
+
 }
 
 @media all and (max-width:330px) {
