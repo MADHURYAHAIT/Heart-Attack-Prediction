@@ -21,8 +21,8 @@
                 <div class="nav-wrapper">
                     <a href="" class="brand-logo">Cardiocare<i class="fas fa-heart"></i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href=""><i class="fas fa-code-branch"></i></a></li>
-                        <li><a href=""><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://github.com/MADHURYAHAIT/Heart-Attack-Prediction"><i class="fas fa-code-branch"></i></a></li>
+                        <li><a href="https://github.com/MADHURYAHAIT"><i class="fab fa-github"></i></a></li>
                     </ul>
                 </div>
             </nav>
@@ -41,32 +41,32 @@
                 <div class="row">
                     <div class="input-field col s12 m6 l6">
                         <label for="Age">Age:</label>
-                        <input type="number" class="validate " id="Age" name="age">
+                        <input type="number" class="validate " id="Age" name="age" min="0" max="200">
                     </div>
 
                     <div class="input-field col s12 m6 l6">
                         <label for="Impulse">Impulse:</label>
-                        <input type="number" step="any" class="validate " id="Impulse" name="impulse">
+                        <input type="number" step="any" class="validate " id="Impulse" name="impulse" min="15" max="250">
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="Pressure_High">Systolic BP:</label>
-                        <input type="number" step="any" class="validate " id="Pressure_High" name="pressurehight" >
+                        <input type="number" step="any" class="validate " id="Pressure_High" name="pressurehight" min="30" max="250" >
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="Pressure_Low">Diastolic BP:</label>
-                        <input type="number" step="any" class="validate " id="Pressure_Low" name="pressurelow" >
+                        <input type="number" step="any" class="validate " id="Pressure_Low" name="pressurelow" min="30" max="200">
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="Glucose">Glucose:</label>
-                        <input type="number" step="any" class="validate " id="Glucose" name="glucose" >
+                        <input type="number" step="any" class="validate " id="Glucose" name="glucose" min="20" max="600">
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="KCM">KCM Value:</label>
-                        <input type="number" step="any" class="validate " id="KCM" name="kcm" >
+                        <input type="number" step="any" class="validate " id="KCM" name="kcm" min="0" max="350">
                     </div>
                     <div class="input-field col s12 m6 l6">
                         <label for="Troponin">Troponin:</label>
-                        <input type="number" step="any" class="validate " id="Troponin" name="troponin" >
+                        <input type="number" step="any" class="validate " id="Troponin" name="troponin" min="0" max="15">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary pulse z-depth-5  ">Submit</button>
@@ -78,12 +78,12 @@
            <div id="result-modal" class="modal">
                <div class="modal-content black">
                    <h4>Result</h4>
-                   <p class="result">{{pred}}</p>
-
+                   <p class="result">{{pred}}<div style="color: red; font-size: 26px;">{{pred3}}</div></p>
+                    
                    <i>{{pred2}}</i>
                </div>
                <div class="modal-footer black">
-                   <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                   <a href="#!" class="modal-close btn btn-primary z-depth-5 btn-flat">Close</a>
                </div>
            </div>
 
