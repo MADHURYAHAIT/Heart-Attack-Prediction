@@ -5,4 +5,4 @@
 
 Here's a video demonstartion : 
 
-https://github.com/MADHURYAHAIT/NutriSync/assets/101663118/1132dda8-119e-4805-b230-82dbbce62dd8
+https://github.com/MADHURYAHAIT/NutriSync/assets/101663118/fcffcf79-ba5b-4410-a763-6f51113b8f0b
