@@ -6,3 +6,15 @@
 Here's a video demonstartion : 
 
 https://github.com/MADHURYAHAIT/NutriSync/assets/101663118/fcffcf79-ba5b-4410-a763-6f51113b8f0b
+
+To run this app:
+
+Clone the Github repo
+
+Open your terminal in the project folder.
+
+run the command :
+
+    python3 app.py
+
+Open the link of the develpoement server
